@@ -1,5 +1,8 @@
 
 import random
+import time
+import os
+
 
 questions_fruit = [
     {
@@ -84,37 +87,37 @@ questions_veggies = [
 
 questions_gen_items = [
     {
-        "question": "What is the Maori word for APPLE?",
+        "question": "What is the Maori word for TV?",
         "answers": ["Āporo", "Wharepaku", "Pākihi", "Kōtirotiro"],
         "correct_answer": 0
     },
     {
-        "question": "What is the Maori word for ORANGE?",
+        "question": "What is the Maori word for COFFEE TABLE?",
         "answers": ["Ārani", "Kōwhitiwhiti", "Karāti", "Tīhi"],
         "correct_answer": 0
     },
     {
-        "question": "What is the Maori word for PEACH?",
+        "question": "What is the Maori word for BED?",
         "answers": ["Wharepēke", "Kōraka", "Pītiti", "Pūteketeke"],
         "correct_answer": 2
     },
     {
-        "question": "What is the Maori word for LEMON?",
+        "question": "What is the Maori word for DRAWERS?",
         "answers": ["Kōremu", "Rēmana", "Wharepure", "Pūtangitangi"],
         "correct_answer": 1
     },
     {
-        "question": "What is the Maori word for WATERMELON?",
+        "question": "What is the Maori word for SMARTPHONE?",
         "answers": ["Pūmate", "Wharemērēti", "Kōmerenika", "Merengi"],
         "correct_answer": 3
     },
     {
-        "question": "What is the Maori word for PLUM?",
+        "question": "What is the Maori word for TOASTER?",
         "answers": ["Wharepēke", "Kōraka", "Paramu", "Pūteketeke"],
         "correct_answer": 2
     },
     {
-        "question": "What is the Maori word for GRAPES?",
+        "question": "What is the Maori word for OVEN?",
         "answers": ["Kerepe", "Kōraka", "Pītiti", "Pūteketeke"],
         "correct_answer": 0
     },
@@ -124,6 +127,12 @@ random.shuffle(questions_fruit)
 random.shuffle(questions_veggies)
 random.shuffle(questions_gen_items)
 
+def delete_multiple_lines():
+    """Clear the console output."""
+    if os.name == "nt":  
+        os.system("cls")
+    else:  
+        return 0
 
 def play_quiz(questions):
     score = 0
@@ -137,11 +146,24 @@ def play_quiz(questions):
     while True:
         play_again = input("Would you like to play again? (Yes/No): ").lower()
         if play_again == "yes":
+            delete_multiple_lines()
             return True
+
         elif play_again == "no":
+            delete_multiple_lines()
             return False
         else:
             print("Hmm, that doesn't seem right. Only type in YES or NO.")
+
+
+def countdown(c):
+    while c >= 0:
+        if c > 0:
+            print(f"{c}...", end="\r")
+        else:
+            print("GO!")
+        time.sleep(1)
+        c -= 1
 
 
 def quiz_start():
@@ -155,10 +177,16 @@ def quiz_start():
         category_choice = input("Enter the number of your chosen category: ")
 
         if category_choice == "1":
-            play_again = play_quiz(questions_fruit)
+            delete_multiple_lines()
+            countdown(3)
+            play_again = play_quiz(questions_fruit) 
         elif category_choice == "2":
+            delete_multiple_lines()
+            countdown(3)
             play_again = play_quiz(questions_veggies)
         elif category_choice == "3":
+            delete_multiple_lines()
+            countdown(3)
             play_again = play_quiz(questions_gen_items)
         else:
             print("That dosen't seem right. Please input a number between 1-3.")
@@ -169,12 +197,8 @@ def quiz_start():
 
     print("Thank you for playing the Māori Language Quiz. Ka kite anō!")
 
-
-
-
-
 def ask_question(question):
-    #Asks the questions
+    """ Asks the questions """
     print(question["question"])
     for i, answer in enumerate(question["answers"]):
         print(f"{i+1}. {answer}")
@@ -184,19 +208,21 @@ def ask_question(question):
     while True:
         user_answer = input("Enter the number of your answer: ")
         if user_answer in valid_answers:
-            break
+            break 
         else:
             print("Sorry, that's not a valid option. Please choose an answer from 1 to 4.")
 
     user_answer = int(user_answer)
 
     if user_answer == question["correct_answer"] + 1:
-        print("Correct!")
+        delete_multiple_lines()
+        print("Correct!\n")
         return 1
     else:
         correct_index = question["correct_answer"]
         correct_answer = question["answers"][correct_index]
-        print("Incorrect! The correct answer was:", correct_answer)
+        delete_multiple_lines()
+        print("Incorrect! The correct answer was:", correct_answer, "\n")
         return 0
 
 
