@@ -117,12 +117,12 @@ questions_gen_items = [
     },
     {
         "question": "What is the Maori word for TOASTER?",
-        "answers": ["Wharepēke", "Whakatōhi", "Paramu", "Pūteketeke"],
+        "answers": ["Tahuwhakarihi", "Whakatōhi", "Kōreropūhoro", "Pūrahatete"],
         "correct_answer": 1
     },
     {
         "question": "What is the Maori word for OVEN?",
-        "answers": ["Kerepe", "Kōraka", "Pītiti", "Umu"],
+        "answers": ["Pōkaiwhakaara", "Tīwaiwera", "Whakararotu", "Umu"],
         "correct_answer": 3
     },
 ]
