@@ -9,37 +9,44 @@ import os
 questions_fruit = [
     {
         "question": "What is the Maori word for APPLE?",
-        "answers": ["Āporo", "Wharepaku", "Pākihi", "Kōtirotiro"],
+        "answers": ["Āporo", "Wharepaku",
+                    "Pākihi", "Kōtirotiro"],
         "correct_answer": 0
     },
     {
         "question": "What is the Maori word for ORANGE?",
-        "answers": ["Ārani", "Kōwhitiwhiti", "Karāti", "Tīhi"],
+        "answers": ["Ārani", "Kōwhitiwhiti",
+                    "Karāti", "Tīhi"],
         "correct_answer": 0
     },
     {
         "question": "What is the Maori word for PEACH?",
-        "answers": ["Wharepēke", "Kōraka", "Pītiti", "Pūteketeke"],
+        "answers": ["Wharepēke", "Kōraka",
+                    "Pītiti", "Pūteketeke"],
         "correct_answer": 2
     },
     {
         "question": "What is the Maori word for LEMON?",
-        "answers": ["Kōremu", "Rēmana", "Wharepure", "Pūtangitangi"],
+        "answers": ["Kōremu", "Rēmana",
+                    "Wharepure", "Pūtangitangi"],
         "correct_answer": 1
     },
     {
         "question": "What is the Maori word for WATERMELON?",
-        "answers": ["Pūmate", "Wharemērēti", "Kōmerenika", "Merengi"],
+        "answers": ["Pūmate", "Wharemērēti",
+                    "Kōmerenika", "Merengi"],
         "correct_answer": 3
     },
     {
         "question": "What is the Maori word for PLUM?",
-        "answers": ["Wharepēke", "Kōraka", "Paramu", "Pūteketeke"],
+        "answers": ["Wharepēke", "Kōraka",
+                    "Paramu", "Pūteketeke"],
         "correct_answer": 2
     },
     {
         "question": "What is the Maori word for GRAPES?",
-        "answers": ["Kerepe", "Kōraka", "Pītiti", "Pūteketeke"],
+        "answers": ["Kerepe", "Kōraka",
+                    "Pītiti", "Pūteketeke"],
         "correct_answer": 0
     },
 ]
@@ -47,17 +54,20 @@ questions_fruit = [
 questions_veggies = [
     {
         "question": "What is the Maori word for CORN?",
-        "answers": ["Pukarākau", "Kānga", "Whakangāka", "Pōhākai"],
+        "answers": ["Pukarākau", "Kānga",
+                    "Whakangāka", "Pōhākai"],
         "correct_answer": 1
     },
     {
         "question": "What is the Maori word for ONION?",
-        "answers": ["Wairuku", "Pāhukura", "Whakarāhui", "Aniana"],
+        "answers": ["Wairuku", "Pāhukura",
+                    "Whakarāhui", "Aniana"],
         "correct_answer": 3
     },
     {
         "question": "What is the Maori word for CABBAGE?",
-        "answers": ["Kāpeti", "Pōhakuwhero", "Whakamauī", "Kōhutukawa"],
+        "answers": ["Kāpeti", "Pōhakuwhero",
+                    "Whakamauī", "Kōhutukawa"],
         "correct_answer": 0
     },
     {
@@ -68,22 +78,26 @@ questions_veggies = [
     },
     {
         "question": "What is the Maori word for CARROT?",
-        "answers": ["Whakamārama", "Pōharakoa", "Kāreti", "Kōhutau"],
+        "answers": ["Whakamārama", "Pōharakoa",
+                    "Kāreti", "Kōhutau"],
         "correct_answer": 2
     },
     {
         "question": "What is the Maori word for CUCUMBER?",
-        "answers": ["Kōhuhina", "Pōhapara", "Whakaninihā", "Kūkama"],
+        "answers": ["Kōhuhina", "Pōhapara",
+                    "Whakaninihā", "Kūkama"],
         "correct_answer": 3
     },
     {
         "question": "What is the Maori word for LETTUCE?",
-        "answers": ["Kōhutaka", "Rētihi", "Whakatakataka", "Pōharua"],
+        "answers": ["Kōhutaka", "Rētihi",
+                    "Whakatakataka", "Pōharua"],
         "correct_answer": 1
     },
     {
         "question": "What is the Maori word for POTATO?",
-        "answers": ["Rīwai", "Whakanoho", "Kōhununu", "Pōharore"],
+        "answers": ["Rīwai", "Whakanoho",
+                    "Kōhununu", "Pōharore"],
         "correct_answer": 0
     },
 ]
@@ -91,38 +105,44 @@ questions_veggies = [
 questions_gen_items = [
     {
         "question": "What is the Maori word for TV?",
-        "answers": ["Pātakaarata", "Pouaka Whakaata", 
+        "answers": ["Pātakaarata", "Pouaka Whakaata",
                     "Whakamāharahara", "Hītoriwhakaāhua"],
         "correct_answer": 1
     },
     {
         "question": "What is the Maori word for COFFEE TABLE?",
-        "answers": ["Rākaukawhe", "Papara Kawhe", "Kōrerorangi", "Whakararaenga"],
+        "answers": ["Rākaukawhe", "Papara Kawhe",
+                    "Kōrerorangi", "Whakararaenga"],
         "correct_answer": 1
     },
     {
         "question": "What is the Maori word for BED?",
-        "answers": ["Whakararoturuma", "Moemoeāroha", "Whakapōtiki", "Moenga"],
+        "answers": ["Whakararoturuma", "Moemoeāroha",
+                    "Whakapōtiki", "Moenga"],
         "correct_answer": 3
     },
     {
         "question": "What is the Maori word for DRAWERS?",
-        "answers": ["Whakararanga", "Pūtātara", "Toroa", "Whakapātaka"],
+        "answers": ["Whakararanga", "Pūtātara",
+                    "Toroa", "Whakapātaka"],
         "correct_answer": 2
     },
     {
         "question": "What is the Maori word for SMARTPHONE?",
-        "answers": ["Waea Atamai", "Tamahiko", "Pātikaranga", "Kōreromahi"],
+        "answers": ["Waea Atamai", "Tamahiko",
+                    "Pātikaranga", "Kōreromahi"],
         "correct_answer": 0
     },
     {
         "question": "What is the Maori word for TOASTER?",
-        "answers": ["Tahuwhakarihi", "Whakatōhi", "Kōreropūhoro", "Pūrahatete"],
+        "answers": ["Tahuwhakarihi", "Whakatōhi",
+                    "Kōreropūhoro", "Pūrahatete"],
         "correct_answer": 1
     },
     {
         "question": "What is the Maori word for OVEN?",
-        "answers": ["Pōkaiwhakaara", "Tīwaiwera", "Whakararotu", "Umu"],
+        "answers": ["Pōkaiwhakaara", "Tīwaiwera",
+                    "Whakararotu", "Umu"],
         "correct_answer": 3
     },
 ]
@@ -181,7 +201,6 @@ def play_quiz(questions, hard_mode=False):
             print("Hmm, that doesn't seem right. Only type in YES or NO.")
 
 
-
 def quiz_start():
     """Start the quiz."""
     while True:
@@ -195,7 +214,10 @@ def quiz_start():
 
         if category_choice == "1":
             delete_multiple_lines()
-            difficulty = input("Choose difficulty level \n 1. Easy (no time limit)\n 2. Hard (15 second time limit)\n\nSelect what difficulty you want: ").lower()
+            difficulty = input("""Choose difficulty level \n
+                1. Easy (no time limit)\n
+                2. Hard (15 second time limit)\n\n
+                Select what difficulty you want: """).lower()
             delete_multiple_lines()
             countdown(3, hard_mode_time_limit if difficulty == "2" else 0)
             if difficulty == "2":
@@ -204,7 +226,10 @@ def quiz_start():
                 play_again = play_quiz(questions_fruit)
         elif category_choice == "2":
             delete_multiple_lines()
-            difficulty = input("Choose difficulty level \n 1. Easy (no time limit)\n 2. Hard (15 second time limit)\n\nSelect what difficulty you want: ").lower()
+            difficulty = input("""Choose difficulty level \n
+                1. Easy (no time limit)\n
+                2. Hard (15 second time limit)\n\n
+                Select what difficulty you want: """).lower()
             delete_multiple_lines()
             countdown(3, hard_mode_time_limit if difficulty == "2" else 0)
             if difficulty == "2":
@@ -213,7 +238,10 @@ def quiz_start():
                 play_again = play_quiz(questions_veggies)
         elif category_choice == "3":
             delete_multiple_lines()
-            difficulty = input("Choose difficulty level \n 1. Easy (no time limit)\n 2. Hard (15 second time limit)\n\nSelect what difficulty you want: ").lower()
+            difficulty = input("""Choose difficulty level \n
+                1. Easy (no time limit)\n
+                2. Hard (15 second time limit)\n\n
+                Select what difficulty you want: """).lower()
             delete_multiple_lines()
             countdown(3, hard_mode_time_limit if difficulty == "2" else 0)
             if difficulty == "2":
@@ -243,7 +271,8 @@ def ask_question(question):
         if user_answer in valid_answers:
             break
         else:
-            print("Sorry, that's not a valid option. Please choose an answer from 1 to 4.")
+            print("""Sorry, that's not a valid option.
+                Please choose an answer from 1 to 4.""")
 
     user_answer = int(user_answer)
 
