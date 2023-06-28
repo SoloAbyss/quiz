@@ -214,10 +214,11 @@ def quiz_start():
 
         if category_choice == "1":
             delete_multiple_lines()
-            difficulty = input("""Choose difficulty level \n
-                1. Easy (no time limit)\n
-                2. Hard (15 second time limit)\n\n
-                Select what difficulty you want: """).lower()
+            difficulty = input("""
+            Choose difficulty level \n
+            1. Easy (no time limit)\n
+            2. Hard (15 second time limit)\n\n
+            Select what difficulty you want: """).lower()
             delete_multiple_lines()
             countdown(3, hard_mode_time_limit if difficulty == "2" else 0)
             if difficulty == "2":
@@ -226,10 +227,11 @@ def quiz_start():
                 play_again = play_quiz(questions_fruit)
         elif category_choice == "2":
             delete_multiple_lines()
-            difficulty = input("""Choose difficulty level \n
-                1. Easy (no time limit)\n
-                2. Hard (15 second time limit)\n\n
-                Select what difficulty you want: """).lower()
+            difficulty = input("""
+            Choose difficulty level \n
+            1. Easy (no time limit)\n
+            2. Hard (15 second time limit)\n\n
+            Select what difficulty you want: """).lower()
             delete_multiple_lines()
             countdown(3, hard_mode_time_limit if difficulty == "2" else 0)
             if difficulty == "2":
@@ -238,10 +240,11 @@ def quiz_start():
                 play_again = play_quiz(questions_veggies)
         elif category_choice == "3":
             delete_multiple_lines()
-            difficulty = input("""Choose difficulty level \n
-                1. Easy (no time limit)\n
-                2. Hard (15 second time limit)\n\n
-                Select what difficulty you want: """).lower()
+            difficulty = input("""
+            Choose difficulty level \n
+            1. Easy (no time limit)\n
+            2. Hard (15 second time limit)\n\n
+            Select what difficulty you want: """).lower()
             delete_multiple_lines()
             countdown(3, hard_mode_time_limit if difficulty == "2" else 0)
             if difficulty == "2":
@@ -271,8 +274,9 @@ def ask_question(question):
         if user_answer in valid_answers:
             break
         else:
-            print("""Sorry, that's not a valid option.
-                Please choose an answer from 1 to 4.""")
+            print("""
+            Sorry, that's not a valid option.
+            Please choose an answer from 1 to 4.\n""")
 
     user_answer = int(user_answer)
 
