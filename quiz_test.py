@@ -131,7 +131,7 @@ random.shuffle(questions_fruit)
 random.shuffle(questions_veggies)
 random.shuffle(questions_gen_items)
 
-hard_mode_time_limit = 60  # 2 minutes
+hard_mode_time_limit = 15
 
 
 def delete_multiple_lines():
@@ -195,7 +195,7 @@ def quiz_start():
 
         if category_choice == "1":
             delete_multiple_lines()
-            difficulty = input("Choose difficulty level \n 1. Easy (no time limit)\n 2. Hard (1 minute time limit)\n\nSelect what difficulty you want: ").lower()
+            difficulty = input("Choose difficulty level \n 1. Easy (no time limit)\n 2. Hard (15 second time limit)\n\nSelect what difficulty you want: ").lower()
             delete_multiple_lines()
             countdown(3, hard_mode_time_limit if difficulty == "2" else 0)
             if difficulty == "2":
@@ -204,7 +204,7 @@ def quiz_start():
                 play_again = play_quiz(questions_fruit)
         elif category_choice == "2":
             delete_multiple_lines()
-            difficulty = input("Choose difficulty level \n 1. Easy (no time limit)\n 2. Hard (1 minute time limit)\n\nSelect what difficulty you want: ").lower()
+            difficulty = input("Choose difficulty level \n 1. Easy (no time limit)\n 2. Hard (15 second time limit)\n\nSelect what difficulty you want: ").lower()
             delete_multiple_lines()
             countdown(3, hard_mode_time_limit if difficulty == "2" else 0)
             if difficulty == "2":
@@ -213,7 +213,7 @@ def quiz_start():
                 play_again = play_quiz(questions_veggies)
         elif category_choice == "3":
             delete_multiple_lines()
-            difficulty = input("Choose difficulty level \n 1. Easy (no time limit)\n 2. Hard (1 minute time limit)\n\nSelect what difficulty you want: ").lower()
+            difficulty = input("Choose difficulty level \n 1. Easy (no time limit)\n 2. Hard (15 second time limit)\n\nSelect what difficulty you want: ").lower()
             delete_multiple_lines()
             countdown(3, hard_mode_time_limit if difficulty == "2" else 0)
             if difficulty == "2":
