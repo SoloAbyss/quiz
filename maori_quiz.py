@@ -28,15 +28,17 @@ def ask_question(question):
     for i, answer in enumerate(question["answers"]):
         print(f"{i+1}. {answer}")
 
-    valid_answers = [str(i+1) for i in range(len(question["answers"]))]
+    valid_answers = [str(i + 1) for i in range(len(question["answers"]))]
 
     while True:
         user_answer = input("Enter the number of your answer: ")
         if user_answer in valid_answers:
             break
         else:
-            print("Sorry, that's not a valid option."
-                  "Please choose an answer from 1 to 4.\n")
+            print(
+                "Sorry, that's not a valid option."
+                "Please choose an answer from 1 to 4.\n"
+            )
 
     user_answer = int(user_answer)
 
@@ -86,142 +88,125 @@ def quiz_start():
     """Start the quiz."""
     questions_fruit = [
         {
-         "question": "What is the Maori word for APPLE?",
-         "answers": ["Āporo", "Wharepaku",
-                     "Pākihi", "Kōtirotiro"],
-         "correct_answer": 0
+            "question": "What is the Maori word for APPLE?",
+            "answers": ["Āporo", "Wharepaku", "Pākihi", "Kōtirotiro"],
+            "correct_answer": 0,
         },
         {
-         "question": "What is the Maori word for ORANGE?",
-         "answers": ["Ārani", "Kōwhitiwhiti",
-                     "Karāti", "Tīhi"],
-         "correct_answer": 0
+            "question": "What is the Maori word for ORANGE?",
+            "answers": ["Ārani", "Kōwhitiwhiti", "Karāti", "Tīhi"],
+            "correct_answer": 0,
         },
         {
-         "question": "What is the Maori word for PEACH?",
-         "answers": ["Wharepēke", "Kōraka",
-                     "Pītiti", "Pūteketeke"],
-         "correct_answer": 2
+            "question": "What is the Maori word for PEACH?",
+            "answers": ["Wharepēke", "Kōraka", "Pītiti", "Pūteketeke"],
+            "correct_answer": 2,
         },
         {
-         "question": "What is the Maori word for LEMON?",
-         "answers": ["Kōremu", "Rēmana",
-                     "Wharepure", "Pūtangitangi"],
-         "correct_answer": 1
+            "question": "What is the Maori word for LEMON?",
+            "answers": ["Kōremu", "Rēmana", "Wharepure", "Pūtangitangi"],
+            "correct_answer": 1,
         },
         {
-         "question": "What is the Maori word for WATERMELON?",
-         "answers": ["Pūmate", "Wharemērēti",
-                     "Kōmerenika", "Merengi"],
-         "correct_answer": 3
+            "question": "What is the Maori word for WATERMELON?",
+            "answers": ["Pūmate", "Wharemērēti", "Kōmerenika", "Merengi"],
+            "correct_answer": 3,
         },
         {
-         "question": "What is the Maori word for PLUM?",
-         "answers": ["Wharepēke", "Kōraka",
-                     "Paramu", "Pūteketeke"],
-         "correct_answer": 2
+            "question": "What is the Maori word for PLUM?",
+            "answers": ["Wharepēke", "Kōraka", "Paramu", "Pūteketeke"],
+            "correct_answer": 2,
         },
         {
-         "question": "What is the Maori word for GRAPES?",
-         "answers": ["Kerepe", "Kōraka",
-                     "Pītiti", "Pūteketeke"],
-         "correct_answer": 0
+            "question": "What is the Maori word for GRAPES?",
+            "answers": ["Kerepe", "Kōraka", "Pītiti", "Pūteketeke"],
+            "correct_answer": 0,
         },
     ]
 
     questions_veggies = [
         {
-         "question": "What is the Maori word for CORN?",
-         "answers": ["Pukarākau", "Kānga",
-                     "Whakangāka", "Pōhākai"],
-         "correct_answer": 1
+            "question": "What is the Maori word for CORN?",
+            "answers": ["Pukarākau", "Kānga", "Whakangāka", "Pōhākai"],
+            "correct_answer": 1,
         },
         {
-         "question": "What is the Maori word for ONION?",
-         "answers": ["Wairuku", "Pāhukura",
-                     "Whakarāhui", "Aniana"],
-         "correct_answer": 3
+            "question": "What is the Maori word for ONION?",
+            "answers": ["Wairuku", "Pāhukura", "Whakarāhui", "Aniana"],
+            "correct_answer": 3,
         },
         {
-         "question": "What is the Maori word for CABBAGE?",
-         "answers": ["Kāpeti", "Pōhakuwhero",
-                     "Whakamauī", "Kōhutukawa"],
-         "correct_answer": 0
+            "question": "What is the Maori word for CABBAGE?",
+            "answers": ["Kāpeti", "Pōhakuwhero", "Whakamauī", "Kōhutukawa"],
+            "correct_answer": 0,
         },
         {
-         "question": "What is the Maori word for CAULIFLOWER?",
-         "answers": ["Kareparāoa", "Whakanuihuka",
-                     "Pōhakahukarere", "Kōhurere"],
-         "correct_answer": 0
+            "question": "What is the Maori word for CAULIFLOWER?",
+            "answers": ["Kareparāoa", "Whakanuihuka", "Pōhakahukarere", "Kōhurere"],
+            "correct_answer": 0,
         },
         {
-         "question": "What is the Maori word for CARROT?",
-         "answers": ["Whakamārama", "Pōharakoa",
-                     "Kāreti", "Kōhutau"],
-         "correct_answer": 2
+            "question": "What is the Maori word for CARROT?",
+            "answers": ["Whakamārama", "Pōharakoa", "Kāreti", "Kōhutau"],
+            "correct_answer": 2,
         },
         {
-         "question": "What is the Maori word for CUCUMBER?",
-         "answers": ["Kōhuhina", "Pōhapara",
-                     "Whakaninihā", "Kūkama"],
-         "correct_answer": 3
+            "question": "What is the Maori word for CUCUMBER?",
+            "answers": ["Kōhuhina", "Pōhapara", "Whakaninihā", "Kūkama"],
+            "correct_answer": 3,
         },
         {
-         "question": "What is the Maori word for LETTUCE?",
-         "answers": ["Kōhutaka", "Rētihi",
-                     "Whakatakataka", "Pōharua"],
-         "correct_answer": 1
+            "question": "What is the Maori word for LETTUCE?",
+            "answers": ["Kōhutaka", "Rētihi", "Whakatakataka", "Pōharua"],
+            "correct_answer": 1,
         },
         {
-         "question": "What is the Maori word for POTATO?",
-         "answers": ["Rīwai", "Whakanoho",
-                     "Kōhununu", "Pōharore"],
-         "correct_answer": 0
+            "question": "What is the Maori word for POTATO?",
+            "answers": ["Rīwai", "Whakanoho", "Kōhununu", "Pōharore"],
+            "correct_answer": 0,
         },
     ]
 
     questions_gen_items = [
         {
-         "question": "What is the Maori word for TV?",
-         "answers": ["Pātakaarata", "Pouaka Whakaata",
-                     "Whakamāharahara", "Hītoriwhakaāhua"],
-         "correct_answer": 1
+            "question": "What is the Maori word for TV?",
+            "answers": [
+                "Pātakaarata",
+                "Pouaka Whakaata",
+                "Whakamāharahara",
+                "Hītoriwhakaāhua",
+            ],
+            "correct_answer": 1,
         },
         {
-         "question": "What is the Maori word for COFFEE TABLE?",
-         "answers": ["Rākaukawhe", "Papara Kawhe",
-                     "Kōrerorangi", "Whakararaenga"],
-         "correct_answer": 1
+            "question": "What is the Maori word for COFFEE TABLE?",
+            "answers": ["Rākaukawhe", "Papara Kawhe", "Kōrerorangi", "Whakararaenga"],
+            "correct_answer": 1,
         },
         {
-         "question": "What is the Maori word for BED?",
-         "answers": ["Whakararoturuma", "Moemoeāroha",
-                     "Whakapōtiki", "Moenga"],
-         "correct_answer": 3
+            "question": "What is the Maori word for BED?",
+            "answers": ["Whakararoturuma", "Moemoeāroha", "Whakapōtiki", "Moenga"],
+            "correct_answer": 3,
         },
         {
-         "question": "What is the Maori word for DRAWERS?",
-         "answers": ["Whakararanga", "Pūtātara",
-                     "Toroa", "Whakapātaka"],
-         "correct_answer": 2
+            "question": "What is the Maori word for DRAWERS?",
+            "answers": ["Whakararanga", "Pūtātara", "Toroa", "Whakapātaka"],
+            "correct_answer": 2,
         },
         {
-         "question": "What is the Maori word for SMARTPHONE?",
-         "answers": ["Waea Atamai", "Tamahiko",
-                     "Pātikaranga", "Kōreromahi"],
-         "correct_answer": 0
+            "question": "What is the Maori word for SMARTPHONE?",
+            "answers": ["Waea Atamai", "Tamahiko", "Pātikaranga", "Kōreromahi"],
+            "correct_answer": 0,
         },
         {
-         "question": "What is the Maori word for TOASTER?",
-         "answers": ["Tahuwhakarihi", "Whakatōhi",
-                     "Kōreropūhoro", "Pūrahatete"],
-         "correct_answer": 1
+            "question": "What is the Maori word for TOASTER?",
+            "answers": ["Tahuwhakarihi", "Whakatōhi", "Kōreropūhoro", "Pūrahatete"],
+            "correct_answer": 1,
         },
         {
-         "question": "What is the Maori word for OVEN?",
-         "answers": ["Pōkaiwhakaara", "Tīwaiwera",
-                     "Whakararotu", "Umu"],
-         "correct_answer": 3
+            "question": "What is the Maori word for OVEN?",
+            "answers": ["Pōkaiwhakaara", "Tīwaiwera", "Whakararotu", "Umu"],
+            "correct_answer": 3,
         },
     ]
 
@@ -232,21 +217,25 @@ def quiz_start():
     hard_mode_time_limit = 15
 
     while True:
-        print("Kia ora! Welcome to the Māori Language Quiz."
-              "Please choose a category to test "
-              "your Te Reo Māori knowledge:\n\n"
-              "1. Fruits\n"
-              "2. Vegetables\n"
-              "3. General Items\n")
+        print(
+            "Kia ora! Welcome to the Māori Language Quiz."
+            "Please choose a category to test "
+            "your Te Reo Māori knowledge:\n\n"
+            "1. Fruits\n"
+            "2. Vegetables\n"
+            "3. General Items\n"
+        )
 
         category_choice = input("Enter the number of your chosen category: ")
 
         if category_choice == "1":
             delete_multiple_lines()
-            difficulty = input("Choose difficulty level: \n\n"
-                               "1. Easy (no time limit)\n"
-                               "2. Hard (15 second time limit)\n\n"
-                               "Select what difficulty you want: ").lower()
+            difficulty = input(
+                "Choose difficulty level: \n\n"
+                "1. Easy (no time limit)\n"
+                "2. Hard (15 second time limit)\n\n"
+                "Select what difficulty you want: "
+            ).lower()
             delete_multiple_lines()
             countdown(3, hard_mode_time_limit if difficulty == "2" else 0)
             if difficulty == "2":
@@ -255,10 +244,12 @@ def quiz_start():
                 play_again = play_quiz(questions_fruit)
         elif category_choice == "2":
             delete_multiple_lines()
-            difficulty = input("Choose difficulty level: \n\n"
-                               "1. Easy (no time limit)\n"
-                               "2. Hard (15 second time limit)\n\n"
-                               "Select what difficulty you want: ").lower()
+            difficulty = input(
+                "Choose difficulty level: \n\n"
+                "1. Easy (no time limit)\n"
+                "2. Hard (15 second time limit)\n\n"
+                "Select what difficulty you want: "
+            ).lower()
             delete_multiple_lines()
             countdown(3, hard_mode_time_limit if difficulty == "2" else 0)
             if difficulty == "2":
@@ -267,10 +258,12 @@ def quiz_start():
                 play_again = play_quiz(questions_veggies)
         elif category_choice == "3":
             delete_multiple_lines()
-            difficulty = input("Choose difficulty level: \n\n"
-                               "1. Easy (no time limit)\n"
-                               "2. Hard (15 second time limit)\n\n"
-                               "Select what difficulty you want: ").lower()
+            difficulty = input(
+                "Choose difficulty level: \n\n"
+                "1. Easy (no time limit)\n"
+                "2. Hard (15 second time limit)\n\n"
+                "Select what difficulty you want: "
+            ).lower()
             delete_multiple_lines()
             countdown(3, hard_mode_time_limit if difficulty == "2" else 0)
             if difficulty == "2":
