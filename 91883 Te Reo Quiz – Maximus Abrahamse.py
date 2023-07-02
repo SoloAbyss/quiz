@@ -9,6 +9,8 @@ def delete_multiple_lines():
     """Clear the console output."""
     if os.name == "nt":
         os.system("cls")
+    else:
+        os.system("clear")
 
 
 def countdown(c, time_limit):
