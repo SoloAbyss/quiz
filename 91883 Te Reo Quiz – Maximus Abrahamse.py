@@ -164,7 +164,7 @@ def countdown(c, time_limit):
     """Countdown timer when starting quiz."""
     while c >= 0:
         if c > 0:
-            print(f"{c}...", end="\r")
+            print(f"{c}...", end="\n")
         else:
             print("GO!")
         time.sleep(1)
@@ -204,21 +204,20 @@ def play_quiz(questions, hard_mode=False):
 def quiz_start():
     """Start the quiz."""
     while True:
-        print("Kia ora! Welcome to the Māori Language Quiz.")
-        print("Please choose a category to test your Te Reo Māori knowledge:")
-        print("1. Fruits")
-        print("2. Vegetables")
-        print("3. General Items")
+        print("Kia ora! Welcome to the Māori Language Quiz."
+        "Please choose a category to test your Te Reo Māori knowledge:\n\n"
+        "1. Fruits\n"
+        "2. Vegetables\n"
+        "3. General Items\n")
 
         category_choice = input("Enter the number of your chosen category: ")
 
         if category_choice == "1":
             delete_multiple_lines()
-            difficulty = input("""
-            Choose difficulty level \n
-            1. Easy (no time limit)\n
-            2. Hard (15 second time limit)\n\n
-            Select what difficulty you want: """).lower()
+            difficulty = input("Choose difficulty level: \n\n"
+            "1. Easy (no time limit)\n"
+            "2. Hard (15 second time limit)\n\n"
+            "Select what difficulty you want: ").lower()
             delete_multiple_lines()
             countdown(3, hard_mode_time_limit if difficulty == "2" else 0)
             if difficulty == "2":
@@ -227,11 +226,10 @@ def quiz_start():
                 play_again = play_quiz(questions_fruit)
         elif category_choice == "2":
             delete_multiple_lines()
-            difficulty = input("""
-            Choose difficulty level \n
-            1. Easy (no time limit)\n
-            2. Hard (15 second time limit)\n\n
-            Select what difficulty you want: """).lower()
+            difficulty = input("Choose difficulty level: \n\n"
+            "1. Easy (no time limit)\n"
+            "2. Hard (15 second time limit)\n\n"
+            "Select what difficulty you want: ").lower()
             delete_multiple_lines()
             countdown(3, hard_mode_time_limit if difficulty == "2" else 0)
             if difficulty == "2":
@@ -240,11 +238,10 @@ def quiz_start():
                 play_again = play_quiz(questions_veggies)
         elif category_choice == "3":
             delete_multiple_lines()
-            difficulty = input("""
-            Choose difficulty level \n
-            1. Easy (no time limit)\n
-            2. Hard (15 second time limit)\n\n
-            Select what difficulty you want: """).lower()
+            difficulty = input("Choose difficulty level: \n\n"
+            "1. Easy (no time limit)\n"
+            "2. Hard (15 second time limit)\n\n"
+            "Select what difficulty you want: ").lower()
             delete_multiple_lines()
             countdown(3, hard_mode_time_limit if difficulty == "2" else 0)
             if difficulty == "2":
@@ -258,7 +255,7 @@ def quiz_start():
         if not play_again:
             break
 
-    print("Thank you for playing the Māori Language Quiz. Ka kite anō!")
+    print("\nThank you for playing the Māori Language Quiz. Ka kite anō!\n")
 
 
 def ask_question(question):
@@ -274,9 +271,8 @@ def ask_question(question):
         if user_answer in valid_answers:
             break
         else:
-            print("""
-            Sorry, that's not a valid option.
-            Please choose an answer from 1 to 4.\n""")
+            print("Sorry, that's not a valid option."
+            "Please choose an answer from 1 to 4.\n")
 
     user_answer = int(user_answer)
 
